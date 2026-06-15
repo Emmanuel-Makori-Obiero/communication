@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Dashboard</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body
+    class="bg-[#f0f4f9] font-sans antialiased min-h-screen p-8 text-[#1e293b]"
+  >
+    <div id="Wholecontainer" class="max-w-7xl mx-auto flex flex-col gap-8">
+      <div id="Firstcontainer" class="flex justify-between items-center">
+        <div id="users" class="flex flex-col gap-1">
+          <h1 class="text-3xl font-bold text-[#0f172a]">Users</h1>
+          <p class="text-sm text-gray-500 font-medium">
+            Review and manage all user accounts in your community.
+          </p>
+        </div>
+        <div id="button">
+          <button
+            id="addNew"
+            class="bg-[#0086d6] text-white px-5 py-2.5 rounded-full text-sm font-semibold tracking-wide shadow-md hover:bg-[#0074b8] transition duration-300 flex items-center gap-1"
+          >
+            + Add New User
+          </button>
+        </div>
+      </div>
+
+      <div id="secondcontainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          id="totalusers"
+          class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm flex flex-col gap-2 min-h-[140px] justify-center"
+        >
+          <h1 id="totalUsersCount" class="text-4xl font-bold text-slate-800">
+            0
+          </h1>
+          <p
+            class="text-xs font-semibold text-gray-400 uppercase tracking-wider"
+          >
+            Total Users
+          </p>
+        </div>
+
+        <div
+          id="filteredusers"
+          class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm flex flex-col gap-2 min-h-[140px] justify-center"
+        >
+          <h1 id="filteredUsersCount" class="text-4xl font-bold text-[#0086d6]">
+            0
+          </h1>
+          <p
+            class="text-xs font-semibold text-gray-400 uppercase tracking-wider"
+          >
+            Total Filtered Users
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 flex flex-col gap-6"
+      >
+        <div
+          class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-gray-50 pb-4"
+        >
+          <div>
+            <span
+              class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1"
+              >Users List</span
+            >
+            <h2 class="text-xl font-bold text-slate-800">Active accounts</h2>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="flex flex-col min-w-[140px]">
+              <label
+                for="genderFilter"
+                class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1 pl-1"
+                >Gender</label
+              >
+              <select
+                id="genderFilter"
+                class="bg-[#f0f4f9] text-sm font-medium text-slate-700 px-3 py-2 rounded-xl border-none outline-none cursor-pointer w-full"
+              >
+                <option value="all">All Genders</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col min-w-[160px]">
+              <label
+                for="dateFilter"
+                class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1 pl-1"
+                >Created Date</label
+              >
+              <select
+                id="dateFilter"
+                class="bg-[#f0f4f9] text-sm font-medium text-slate-700 px-3 py-2 rounded-xl border-none outline-none cursor-pointer w-full"
+              >
+                <option value="all">Any Time</option>
+                <option value="2026">Registered in 2026</option>
+                <option value="2025">Registered in 2025</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr
+                class="border-b border-gray-100 text-[#64748b] text-[11px] font-bold tracking-widest uppercase"
+              >
+                <th class="pb-4 font-semibold">First Name</th>
+                <th class="pb-4 font-semibold">Last Name</th>
+                <th class="pb-4 font-semibold">Username</th>
+                <th class="pb-4 font-semibold">Email</th>
+                <th class="pb-4 font-semibold">Phone</th>
+                <th class="pb-4 font-semibold">Dob</th>
+                <th class="pb-4 font-semibold">Gender</th>
+                <th class="pb-4 font-semibold">CreatedAt</th>
+              </tr>
+            </thead>
+            <tbody
+              id="userTableBody"
+              class="divide-y divide-gray-100 text-sm text-slate-700"
+            >
+              <tr>
+                <td
+                  colspan="8"
+                  class="text-center py-12 text-gray-400 font-medium"
+                >
+                  Waiting to connect index.js script...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>
